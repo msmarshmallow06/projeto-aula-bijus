@@ -50,7 +50,11 @@ function setup() {
   
   obstaclesGroup = createGroup();
   cloudsGroup = createGroup();
-  
+
+  //criar grupos de obstáculos e nuvens
+  obstaclesGroup = createGroup()
+  cloudsGroup = createGroup()
+
   console.log("Olá" + 5);
   
   score = 0;
@@ -96,6 +100,10 @@ function draw() {
      
      obstaclesGroup.setVelocityXEach(0);
      cloudsGroup.setVelocityXEach(0);
+
+
+     obstaclesGroup.setVelocityXEach(0)
+     cloudsGroup.setVelocityXEach(0)
    }
   
  
@@ -131,7 +139,8 @@ function spawnObstacles(){
    
     obstacle.scale = 0.5;
     obstacle.lifetime = 300;
-   
+
+    //adicione cada obstáculo ao grupo
     obstaclesGroup.add(obstacle);
  }
 }
